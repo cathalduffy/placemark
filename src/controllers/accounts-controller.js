@@ -3,12 +3,12 @@ import { db } from "../models/db.js";
 export const accountsController = {
   index: {
     handler: function (request, h) {
-      return h.view("main", { title: "Welcome to Placemark" });
+      return h.view("main", { title: "Welcome to Category" });
     },
   },
   showSignup: {
     handler: function (request, h) {
-      return h.view("signup-view", { title: "Sign up for Placemark" });
+      return h.view("signup-view", { title: "Sign up for Category" });
     },
   },
   signup: {
@@ -20,7 +20,7 @@ export const accountsController = {
   },
   showLogin: {
     handler: function (request, h) {
-      return h.view("login-view", { title: "Login to Placemark" });
+      return h.view("login-view", { title: "Login to Category" });
     },
   },
   login: {

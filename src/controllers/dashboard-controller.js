@@ -3,21 +3,21 @@ import { db } from "../models/db.js";
 export const dashboardController = {
   index: {
     handler: async function (request, h) {
-      const placemarks = await db.placemarkStore.getAllPlacemarks();
+      const categories = await db.categoryStore.getAllCategories();
       const viewData = {
         title: "Playtime Dashboard",
-        placemarks: placemarks,
+        categories: categories,
       };
       return h.view("dashboard-view", viewData);
     },
   },
 
-  addPlacemark: {
+  addCategory: {
     handler: async function (request, h) {
-      const newPlacemark = {
+      const newCategory = {
         title: request.payload.title,
       };
-      await db.placemarkStore.addPlacemark(newPlacemark);
+      await db.categoryStore.addCategory(newCategory);
       return h.redirect("/dashboard");
     },
   },

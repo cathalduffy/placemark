@@ -24,4 +24,12 @@ export const categoryController = {
       return h.redirect(`/category/${category._id}`);
     },
   },
+
+  deletePlacemark: {
+    handler: async function(request, h) {
+      const category = await db.categoryStore.getCategoryById(request.params.id);
+      await db.placemarkStore.deletePlacemark(request.params.placemarkid);
+      return h.redirect(`/category/${category._id}`);
+    },
+  },
 };

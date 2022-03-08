@@ -7,22 +7,37 @@ export const placemarkMemStore = {
     return placemarks;
   },
 
-  async addPlacemark(placemark) {
+  async addPlacemark(categoryId, placemark) {
     placemark._id = v4();
+    placemark.categoryid = categoryId;
     placemarks.push(placemark);
     return placemark;
   },
 
-  async getPlacemakById(id) {
+  async getPlacemarksByCategoryId(id) {
+    return placemarks.filter((placemark) => placemark.categoryid === id);
+  },
+
+  async getPlacemarkById(id) {
     return placemarks.find((placemark) => placemark._id === id);
   },
 
-  async deletePlacemarkById(id) {
+  async getCategoryPlacemarks(categoryId) {
+    return placemarks.filter((placemark) => placemark.categoryid === categoryId);
+  },
+
+  async deletePlacemark(id) {
     const index = placemarks.findIndex((placemark) => placemark._id === id);
     placemarks.splice(index, 1);
   },
 
   async deleteAllPlacemarks() {
     placemarks = [];
+  },
+
+  async updatePlacemark(placemark, updatedPlacemark) {
+    placemark.title = updatedPlacemark.title;
+    placemark.artist = updatedPlacemark.artist;
+    placemark.duration = updatedPlacemark.duration;
   },
 };

@@ -9,3 +9,7 @@ npm install handlebars
 
 ## Install package to allow unique ids to be generated
 npm install uuid
+
+## Install package to allow sessions
+npm install @hapi/cookie
+

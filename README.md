@@ -13,3 +13,15 @@ npm install uuid
 ## Install package to allow sessions
 npm install @hapi/cookie
 
+## Install package to allow for .env file
+npm install dotenv
+
+## Install package to allow for form validation rules
+npm install joi
+
+## Install package to allow for Json data store
+npm install lowdb
+
+
+
+

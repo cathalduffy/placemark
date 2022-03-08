@@ -19,5 +19,9 @@ npm install dotenv
 ## Install package to allow for form validation rules
 npm install joi
 
+## Install package to allow for Json data store
+npm install lowdb
+
+
 
 

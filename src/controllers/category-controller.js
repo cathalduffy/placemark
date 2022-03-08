@@ -16,9 +16,9 @@ export const categoryController = {
     handler: async function (request, h) {
       const category = await db.categoryStore.getCategoryById(request.params.id);
       const newPlacemark = {
-        title: request.payload.title,
-        artist: request.payload.artist,
-        duration: Number(request.payload.duration),
+        name: request.payload.name,
+        latitude: Number(request.payload.longitude),
+        longitude: Number(request.payload.longitude),
       };
       await db.placemarkStore.addPlacemark(category._id, newPlacemark);
       return h.redirect(`/category/${category._id}`);

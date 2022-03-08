@@ -1,4 +1,6 @@
 import { v4 } from "uuid";
+import { placemarkMemStore } from "./placemark-mem-store.js";
+
 
 let categories = [];
 
@@ -14,8 +16,9 @@ export const categoryMemStore = {
   },
 
   async getCategoryById(id) {
-    return categories.find((category) => category._id === id);
-  },
+    const list = categories.find((category) => category._id === id);
+    list.placemarks = await placemarkMemStore.getPlacemarksByCategoryId(list._id);
+    return list;  },
 
   async deleteCategoryById(id) {
     const index = categories.findIndex((category) => category._id === id);
@@ -24,5 +27,9 @@ export const categoryMemStore = {
 
   async deleteAllCategories() {
     categories = [];
+  },
+
+  async getUserCategories(userid) {
+    return categories.filter((category) => category.userid === userid);
   },
 };

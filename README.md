@@ -22,6 +22,10 @@ npm install joi
 ## Install package to allow for Json data store
 npm install lowdb
 
+## Install packages to allow for unit testing
+npm install -D mocha
+npm install -D chai
+
 
 
 

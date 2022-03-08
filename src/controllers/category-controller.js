@@ -1,4 +1,5 @@
 import { db } from "../models/db.js";
+import { PlacemarkSpec } from "../models/joi-schemas.js";
 
 export const categoryController = {
   index: {
@@ -13,11 +14,18 @@ export const categoryController = {
   },
 
   addPlacemark: {
+    validate: {
+      payload: PlacemarkSpec,
+      options: { abortEarly: false },
+      failAction: function (request, h, error) {
+        return h.view("category-view", { title: "Add placemark error", errors: error.details }).takeover().code(400);
+      },
+    },
     handler: async function (request, h) {
       const category = await db.categoryStore.getCategoryById(request.params.id);
       const newPlacemark = {
         name: request.payload.name,
-        latitude: Number(request.payload.longitude),
+        latitude: Number(request.payload.latitude),
         longitude: Number(request.payload.longitude),
       };
       await db.placemarkStore.addPlacemark(category._id, newPlacemark);

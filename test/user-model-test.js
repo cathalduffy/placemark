@@ -4,6 +4,7 @@ import { maggie, testUsers } from "./fixtures.js";
 
 suite("User API tests", () => {
 
+
   setup(async () => {
     db.init();
     await db.userStore.deleteAll();

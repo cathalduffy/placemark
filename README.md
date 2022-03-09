@@ -26,6 +26,10 @@ npm install lowdb
 npm install -D mocha
 npm install -D chai
 
+## Install Mongoose library to interact with Mongo
+npm install mongoose
+
+
 
 
 

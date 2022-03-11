@@ -1,10 +1,12 @@
+// Contains the functions used to read/update data in Mongo for placemarks
+
 import { Category } from "./category.js";
 import { placemarkMongoStore } from "./placemark-mongo-store.js";
 
 export const categoryMongoStore = {
   async getAllCategories() {
-    const categorys = await Category.find().lean();
-    return categorys;
+    const categories = await Category.find().lean();
+    return categories;
   },
 
   async getCategoryById(id) {

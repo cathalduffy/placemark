@@ -1,8 +1,8 @@
 import { assert } from "chai";
-import { db } from "../src/models/db.js";
-import { maggie, testUsers } from "./fixtures.js";
+import { db } from "../../src/models/db.js";
+import { maggie, testUsers } from "../fixtures.js";
 // eslint-disable-next-line import/no-unresolved
-import { assertSubset } from "./test-utils.js";
+import { assertSubset } from "../test-utils.js";
 
 suite("User Model tests", () => {
 

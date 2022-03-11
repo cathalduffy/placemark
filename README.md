@@ -29,6 +29,11 @@ npm install -D chai
 ## Install Mongoose library to interact with Mongo
 npm install mongoose
 
+## Install module to make retiring HHTP code easier
+npm install @hapi/boom
+
+## Allow HTTP client library
+npm install -D axios
 
 
 

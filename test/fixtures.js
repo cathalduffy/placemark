@@ -69,3 +69,5 @@ export const testPlacemarks = [
     "longitude": -6.974394999
   }
 ];
+
+export const serviceUrl = "http://localhost:3000";

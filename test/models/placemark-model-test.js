@@ -1,9 +1,9 @@
 // unit tests that call the functions saved in models to test application
 
 import { assert } from "chai";
-import { db } from "../src/models/db.js";
-import { testCategories, testPlacemarks, tramore, beaches, mountains, testUsers } from "./fixtures.js";
-import { assertSubset } from "./test-utils.js";
+import { db } from "../../src/models/db.js";
+import { testCategories, testPlacemarks, tramore, beaches, mountains, testUsers } from "../fixtures.js";
+import { assertSubset } from "../test-utils.js";
 
 suite("Placemark Model tests", () => {
 

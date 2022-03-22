@@ -38,6 +38,14 @@ npm install -D axios
 ## Relaunches app upon changes being made
 npm install -D nodemon
 
+## Support images
+npm install @hapi/inert
+
+## Allow for swagger docs
+npm install hapi-swagger
+
+
+
 
 
 

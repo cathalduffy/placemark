@@ -44,6 +44,9 @@ npm install @hapi/inert
 ## Allow for swagger docs
 npm install hapi-swagger
 
+npm install leaflet
+
+
 
 
 

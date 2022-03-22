@@ -1,13 +1,26 @@
 {{> menu active="about"}}
 
-<section class="hero">
-  <div class="hero-body has-text-centered">
-    <p class="title ">
-      Placemark : Organise and manage locations you've visited </p>
-    <p class="box">
-      <i class="fas fa-music fa-10x" style="color:darkorange"></i>
-      <i class="fas fa-plus fa-4x" style="color:deepskyblue"></i>
-      <i class="fas fa-headphones fa-10x" style="color:gold"></i>
-    </p>
-  </div>
-</section>
+
+<div id="mapid"></div>
+<style>
+#mapid { height: 500px; }
+</style>
+<script>
+var map = L.map('mapid').setView([53.3498, -6.2603], 10);
+  
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2F0aGFsZHVmZnkiLCJhIjoiY2wxMm9vbjVoMDlhcjNqczBhcHdxNHJlMCJ9.q2BH9KliXYkxZUlsZNm6lQ', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiY2F0aGFsZHVmZnkiLCJhIjoiY2wxMm9vbjVoMDlhcjNqczBhcHdxNHJlMCJ9.q2BH9KliXYkxZUlsZNm6lQ'
+}).addTo(map);
+</script>
+
+  
+{{#each portfolio.projects}}
+  var marker = L.marker([{{latitude}}, {{longitude}}]).addTo(mymap);
+{{/each}}
+
+

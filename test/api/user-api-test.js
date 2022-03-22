@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { playtimeService } from "./placemark-service.js"; 
+import { placemarkService } from "./placemark-service.js"; 
 import { assertSubset } from "../test-utils.js";
 import { maggie, testUsers } from "../fixtures.js";
 
@@ -8,28 +8,28 @@ suite("User API tests", () => {
     await placemarkService.deleteAllUsers();
     for (let i = 0; i < testUsers.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
-      testUsers[0] = await playtimeService.createUser(testUsers[i]);
+      testUsers[0] = await placemarkService.createUser(testUsers[i]);
     }
   });
   teardown(async () => {
   });
 
   test("create a user", async () => {
-    const newUser = await playtimeService.createUser(maggie);
+    const newUser = await placemarkService.createUser(maggie);
     assertSubset(maggie, newUser);
     assert.isDefined(newUser._id);
   });
 
   test("delete all users", async () => {
-    let returnedUsers = await playtimeService.getAllUsers();
+    let returnedUsers = await placemarkService.getAllUsers();
     assert.equal(returnedUsers.length, 3);
-    await playtimeService.deleteAllUsers();
-    returnedUsers = await playtimeService.getAllUsers();
+    await placemarkService.deleteAllUsers();
+    returnedUsers = await placemarkService.getAllUsers();
     assert.equal(returnedUsers.length, 0);
   });
 
   test("get a user - success", async () => {
-    const returnedUser = await playtimeService.getUser(testUsers[0]._id);
+    const returnedUser = await placemarkService.getUser(testUsers[0]._id);
     assert.deepEqual(testUsers[0], returnedUser);
   });
 });

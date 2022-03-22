@@ -35,6 +35,10 @@ npm install @hapi/boom
 ## Allow HTTP client library
 npm install -D axios
 
+## Relaunches app upon changes being made
+npm install -D nodemon
+
+
 
 
 

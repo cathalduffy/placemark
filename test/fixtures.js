@@ -27,7 +27,7 @@ export const testUsers = [
 ];
 
 export const mountains = {
-  title: "Mountains"
+  title: "Mountains",
 };
 
 export const beaches = {

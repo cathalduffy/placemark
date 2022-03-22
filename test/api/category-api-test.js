@@ -24,7 +24,7 @@ suite("Category API tests", () => {
   });
 
   test("delete a category", async () => {
-    const category = await placemarkService.createCategory(mozart);
+    const category = await placemarkService.createCategory(mountains);
     const response = await placemarkService.deleteCategory(category._id);
     assert.equal(response.status, 204);
     try {

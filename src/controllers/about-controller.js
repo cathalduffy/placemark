@@ -1,6 +1,6 @@
 export const aboutController = {
     index: {
-      handler: function (request, h) {
+      handler: async function (request, h) {
         const viewData = {
           title: "About Placemark",
         };
@@ -8,3 +8,4 @@ export const aboutController = {
       },
     },
   };
+

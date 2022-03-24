@@ -4,6 +4,8 @@
       <th>Name</th>
       <th>Latitude</th>
       <th>Longitude</th>
+      <th>Description</th>
+
     </tr>
   </thead>
   <tbody>
@@ -19,6 +21,11 @@
           {{longitude}}
         </td>
         <td>
+          {{description}}
+        <td>
+     <a href="/placemark/{{_id}}" class="ui icon button">
+        <i class="fas fa-folder-open"></i>
+    </a>
           <a href="/category/{{../category._id}}/deleteplacemark/{{_id}}" class="ui icon button">
             <i class="fas fa-trash"></i>
           </a>

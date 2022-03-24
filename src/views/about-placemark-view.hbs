@@ -1,0 +1,30 @@
+{{> menu active="dashboard"}}
+
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>
+          {{placemarks.name}}
+        </td>
+        <td>
+          {{placemarks.latitude}}
+        </td>
+        <td>
+          {{placemarks.longitude}}
+        </td>
+        <td>
+          {{description}}
+        <td>
+              </tbody>
+</table>
+
+  {{> map-view}}

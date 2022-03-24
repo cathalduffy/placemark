@@ -2,20 +2,13 @@
   "categories": [
     {
       "title": "Mountains",
-      "_id": "b82d38f3-2207-44cd-b391-e466e9b844b4"
+      "userid": "62c210b2-585a-41e5-9ba4-3ca0db070f15",
+      "_id": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
     },
     {
-      "title": "Beaches",
-      "_id": "46ed6217-b4de-4721-a4f1-7f9bd25c43e3"
-    },
-    {
-      "title": "Hills",
-      "_id": "4b52bc17-d9ab-475b-be81-0c476f589ca4"
-    },
-    {
-      "userid": "e043bf57-aea5-4cbb-9e0e-83e51b880485",
+      "userid": "0710929a-17b5-4e04-8c8f-167c10377bf2",
       "title": "Mountains",
-      "_id": "66689d6e-9d1d-43e5-9c3e-92caee07e66e"
+      "_id": "59e7d420-edab-470e-b098-0ac404b9ccaf"
     }
   ]
 }

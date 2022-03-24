@@ -27,6 +27,7 @@ export const categoryController = {
         name: request.payload.name,
         latitude: Number(request.payload.latitude),
         longitude: Number(request.payload.longitude),
+        description: request.payload.description,
       };
       await db.placemarkStore.addPlacemark(category._id, newPlacemark);
       return h.redirect(`/category/${category._id}`);

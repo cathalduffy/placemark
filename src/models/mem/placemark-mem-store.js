@@ -39,5 +39,6 @@ export const placemarkMemStore = {
     placemark.name = updatedPlacemark.name;
     placemark.latitude = updatedPlacemark.latitude;
     placemark.longitude = updatedPlacemark.latitude;
+    placemark.description = updatedPlacemark.description;
   },
 };

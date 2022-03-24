@@ -46,6 +46,7 @@ export const placemarkJsonStore = {
     placemark.name = updatedPlacemark.title;
     placemark.latitude = updatedPlacemark.latitude;
     placemark.longitude = updatedPlacemark.longitude;
+    placemark.description = updatedPlacemark.description;
     await db.write();
   },
 };

@@ -2,24 +2,40 @@
   "placemarks": [
     {
       "name": "Tramore",
-      "latitude": 52.1614,
-      "longitude": 7.1493,
-      "_id": "6eb804a9-601b-4cf3-ae0e-d0200ac9d4df",
-      "categoryid": "821cd809-6344-42e8-b38b-230f4b183c94"
+      "latitude": 52.161435,
+      "longitude": -7.149295,
+      "_id": "d33c5dd5-fc36-426c-b92d-e657f892fb93",
+      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
     },
     {
-      "name": "Dublin",
-      "latitude": 53.3498,
-      "longitude": 6.2603,
-      "_id": "6eb804a9-601b-4cf3-ae0e-d0200ac9d4df",
-      "categoryid": "821cd809-6344-42e8-b38b-230f4b183c94"
+      "name": "Dunmore",
+      "latitude": 41.4198027,
+      "longitude": -6.994804,
+      "_id": "f99e3e4d-8218-46c2-8b41-054e7796f5d3",
+      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
     },
     {
-      "name": "Tramore",
-      "latitude": 52.1508,
-      "longitude": -7.1625,
-      "_id": "e80dcdee-02db-47b6-9df6-4187a8704b95",
-      "categoryid": "66689d6e-9d1d-43e5-9c3e-92caee07e66e"
+      "name": "Passage East",
+      "latitude": 52.2396938,
+      "longitude": -6.974394999,
+      "_id": "bc339fc0-45c9-4d1b-a414-ceab03f3fd05",
+      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
+    },
+    {
+      "name": "Galtee Mountains",
+      "latitude": 52.3644,
+      "longitude": -8.1483,
+      "description": "Beautiful scenery",
+      "_id": "e9ff2ee3-142a-4109-b38c-2f26239de2e7",
+      "categoryid": "59e7d420-edab-470e-b098-0ac404b9ccaf"
+    },
+    {
+      "name": "Comeragh Mountains",
+      "latitude": 52.2797,
+      "longitude": -7.5664,
+      "description": "Nice mountain range",
+      "_id": "512fcfdf-5293-436f-9f05-d9d0665e689e",
+      "categoryid": "59e7d420-edab-470e-b098-0ac404b9ccaf"
     }
   ]
 }

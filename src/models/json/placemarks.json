@@ -4,46 +4,22 @@
       "name": "Tramore",
       "latitude": 52.161435,
       "longitude": -7.149295,
-      "_id": "d33c5dd5-fc36-426c-b92d-e657f892fb93",
-      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
+      "_id": "dcb35344-5602-450f-8930-2a6438051c77",
+      "categoryid": "d35c80c3-c1f4-4b0b-b27e-1f71f6095ad9"
     },
     {
       "name": "Dunmore",
       "latitude": 41.4198027,
       "longitude": -6.994804,
-      "_id": "f99e3e4d-8218-46c2-8b41-054e7796f5d3",
-      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
+      "_id": "9c0dbe10-791f-4e4b-a783-de98593f8454",
+      "categoryid": "d35c80c3-c1f4-4b0b-b27e-1f71f6095ad9"
     },
     {
       "name": "Passage East",
       "latitude": 52.2396938,
       "longitude": -6.974394999,
-      "_id": "bc339fc0-45c9-4d1b-a414-ceab03f3fd05",
-      "categoryid": "343708bc-ec44-48ca-ae67-b9eff2a9f1f4"
-    },
-    {
-      "name": "Galtee Mountains",
-      "latitude": 52.3644,
-      "longitude": -8.1483,
-      "description": "Beautiful scenery",
-      "_id": "e9ff2ee3-142a-4109-b38c-2f26239de2e7",
-      "categoryid": "59e7d420-edab-470e-b098-0ac404b9ccaf"
-    },
-    {
-      "name": "Comeragh Mountains",
-      "latitude": 52.2797,
-      "longitude": -7.5664,
-      "description": "Nice mountain range",
-      "_id": "512fcfdf-5293-436f-9f05-d9d0665e689e",
-      "categoryid": "59e7d420-edab-470e-b098-0ac404b9ccaf"
-    },
-    {
-      "name": "Wicklow Mountains",
-      "latitude": 53.0818,
-      "longitude": -6.3939,
-      "description": "The Wicklow Mountains (Irish: Sléibhte Chill Mhantáin,[1] archaic: Cualu) form the largest continuous upland area in the Republic of Ireland. They occupy the whole centre of County Wicklow and stretch outside its borders into the counties of Dublin, Wexford and Carlow. Where the mountains extend into County Dublin, they are known locally as the Dublin Mountains (Sléibhte Bhaile Átha Cliath).[1] The highest peak is Lugnaquilla at 925 metres (3,035 feet).  The mountains are primarily composed of granite surrounded by an envelope of mica-schist and much older rocks such as quartzite. They were pushed up during the Caledonian orogeny at the start of the Devonian period and form part of the Leinster Chain, the largest continuous area of granite in Ireland and Britain. The mountains owe much of their present topography to the effects of the last ice age, which deepened the valleys and created corrie and ribbon lakes. Copper and lead have been the main metals mined in the mountains and a brief gold rush occurred in the 18th century. Several major river systems have their source in the mountains, such as the Liffey, Dargle, Slaney and Avoca rivers. Powerscourt Waterfall is the second tallest in Ireland at 121 metres (397 feet). A number of these rivers have been harnessed to create reservoirs for drinking water for Dublin and its surroundings.  The Wicklow Mountains experience a temperate oceanic climate with mild, damp summers and cool, wet winters. The dominant habitat of the uplands consists of blanket bog, heath and upland grassland. The uplands support a number of bird species, including merlin and peregrine falcon. The valleys are a mixture of coniferous and deciduous woodland.  The mountains have been inhabited since Neolithic times and a number of typical monuments, in particular a series of passage tombs, survive to the present day. The monastery at Glendalough, founded in the late 6th century by Saint Kevin, was an important centre of the Early Church in Ireland. Following the Norman invasion in the 12th century, the Wicklow Mountains became a stronghold and hiding place for Irish clans opposed to English rule. The O'Byrne and O'Toole families carried out a campaign of harassment against the settlers for almost five centuries. Later the mountains harboured rebels during the 1798 Rising. Rebel activity died out after the construction of the Wicklow Military Road at the start of the 19th century and the mountains began to attract tourists to the ruins at Glendalough and to admire the mountain scenery.  The Wicklow Mountains continue to be a major attraction for tourism and recreation. The entire upland area is designated as a Special Area of Conservation and as a Special Protection Area under European Union law. The Wicklow Mountains National Park was established in 1991 to conserve the local biodiversity and landscape.",
-      "_id": "13944668-4947-4f17-997b-0238ece9cebf",
-      "categoryid": "59e7d420-edab-470e-b098-0ac404b9ccaf"
+      "_id": "ccd41d18-47b0-4abd-8ad8-a5582c43c566",
+      "categoryid": "d35c80c3-c1f4-4b0b-b27e-1f71f6095ad9"
     }
   ]
 }

@@ -6,8 +6,6 @@
       <th>Name</th>
       <th>Latitude</th>
       <th>Longitude</th>
-      <th>Description</th>
-
     </tr>
   </thead>
   <tbody>
@@ -21,10 +19,15 @@
         <td>
           {{placemarks.longitude}}
         </td>
-        <td>
-          {{description}}
-        <td>
               </tbody>
 </table>
 
-  {{> map-view}}
+<section>
+<h2 class="title">
+{{placemarks.name}}
+</h2>
+
+<p>{{placemarks.description}}</p>
+</section>
+<br><br>
+{{> map-view}}

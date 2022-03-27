@@ -4,15 +4,37 @@
       "firstName": "Homer",
       "lastName": "Simpson",
       "email": "homer@simpson.com",
-      "password": "secret",
-      "_id": "5aac9880-e607-49b7-a5c1-291a7ca00514"
+      "scope": [
+        "admin",
+        "user"
+      ],
+      "password": "secret"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
+      "scope": [
+        "user"
+      ],
+      "password": "secret"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "scope": [
+        "user"
+      ],
       "password": "secret",
-      "_id": "e3cb2ee1-0126-4b23-bd73-046bf7561e08"
+      "_id": "407c9d3d-60cf-4e8d-abba-9d6ece9e3e23"
+    },
+    {
+      "firstName": "Cathal",
+      "lastName": "Duffy",
+      "email": "cduffy@msn.com",
+      "password": "secret",
+      "_id": "f1a7fd4c-3ea7-4e9a-a527-a86c356c7073"
     }
   ]
 }

@@ -24,6 +24,8 @@ export const UserCredentialsSpec = {
     name: Joi.string().required(),
     latitude: Joi.string().required(),
     longitude: Joi.number().allow("").optional(),
+    description: Joi.string().allow("").optional(),
+
   };
   
   export const CategorySpec = {

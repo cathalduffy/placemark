@@ -1,8 +1,6 @@
- {{#each category.placemarks}}
-        <input type = "hidden" id = "name" value = {{name}} />
-        <input type = "hidden" id = "latitude" value = {{latitude}} />
-        <input type = "hidden" id = "longitude" value = {{longitude}} />
-    {{/each}}
+        <input type = "hidden" id = "name" value = {{placemarks.name}} />
+        <input type = "hidden" id = "latitude" value = {{placemarks.latitude}} />
+        <input type = "hidden" id = "longitude" value = {{placemarks.longitude}} />
 
 <div id="mapid"></div>
 <style>

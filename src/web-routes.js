@@ -3,6 +3,8 @@ import { dashboardController } from "./controllers/dashboard-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
 import { categoryController } from "./controllers/category-controller.js";
 import { placemarkController } from "./controllers/placemark-controller.js";
+import { adminController } from "./controllers/admin-controller.js";
+
 
 
 export const webRoutes = [
@@ -22,5 +24,10 @@ export const webRoutes = [
   { method: "GET", path: "/dashboard/deletecategory/{id}", config: dashboardController.deleteCategory },
   { method: "GET", path: "/category/{id}/deleteplacemark/{placemarkid}", config: categoryController.deletePlacemark },
 
-  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } },
+
+  { method: "GET", path: "/admin", config: adminController.index },
+  { method: "GET", path: "/admin/deleteuser/{id}", config: adminController.deleteUser },
+
+
 ];

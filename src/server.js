@@ -42,8 +42,8 @@ async function init() {
   server.validator(Joi);
   server.auth.strategy("session", "cookie", {
     cookie: {
-      name: process.env.COOKIE_NAME,
-      password: process.env.COOKIE_PASSWORD,
+      name: process.env.cookie_name,
+      password: process.env.cookie_password,
       isSecure: false,
     },
     redirectTo: "/",
@@ -70,7 +70,7 @@ async function init() {
 
 process.on("unhandledRejection", (err) => {
   console.log(err);
-  process.exit(1);
+  // process.exit(1);
 });
 
 const result = dotenv.config();

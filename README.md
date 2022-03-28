@@ -46,6 +46,9 @@ npm install hapi-swagger
 
 npm install leaflet
 
+## Allow for db seeding
+npm install mais-mongoose-seeder
+
 
 
 

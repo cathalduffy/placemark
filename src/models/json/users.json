@@ -4,28 +4,21 @@
       "firstName": "Homer",
       "lastName": "Simpson",
       "email": "homer@simpson.com",
-      "scope": [
-        "admin",
-        "user"
-      ],
+      "scope": "admin",
       "password": "secret"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
-      "scope": [
-        "user"
-      ],
+      "scope": "user",
       "password": "secret"
     },
     {
       "firstName": "Maggie",
       "lastName": "Simpson",
       "email": "maggie@simpson.com",
-      "scope": [
-        "user"
-      ],
+      "scope": "user",
       "password": "secret",
       "_id": "407c9d3d-60cf-4e8d-abba-9d6ece9e3e23"
     },

@@ -49,6 +49,9 @@ npm install leaflet
 ## Allow for db seeding
 npm install mais-mongoose-seeder
 
+## Allow for json web tokens
+npm install hapi-auth-jwt2
+npm install jsonwebtoken
 
 
 

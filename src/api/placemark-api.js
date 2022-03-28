@@ -3,8 +3,10 @@ import { db } from "../models/db.js";
 
 export const placemarkApi = {
   find: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+        handler: async function (request, h) {
       try {
         const placemarks = await db.placemarkStore.getAllPlacemarks();
         return placemarks;
@@ -15,8 +17,10 @@ export const placemarkApi = {
   },
 
   findOne: {
-    auth: false,
-    async handler(request) {
+    auth: {
+      strategy: "jwt",
+    },
+        async handler(request) {
       try {
         const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
         if (!placemark) {
@@ -30,8 +34,10 @@ export const placemarkApi = {
   },
 
   create: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+        handler: async function (request, h) {
       try {
         const placemark = await db.placemarkStore.addPlacemark(request.params.id, request.payload);
         if (placemark) {
@@ -45,8 +51,10 @@ export const placemarkApi = {
   },
 
   deleteAll: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+        handler: async function (request, h) {
       try {
         await db.placemarkStore.deleteAllPlacemarks();
         return h.response().code(204);
@@ -57,8 +65,10 @@ export const placemarkApi = {
   },
 
   deleteOne: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+        handler: async function (request, h) {
       try {
         const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
         if (!placemark) {

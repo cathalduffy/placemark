@@ -4,7 +4,9 @@ import { db } from "../models/db.js";
 // endpoints
 export const categoryApi = {
     find: {
-        auth: false,
+      auth: {
+        strategy: "jwt",
+      },
         handler: async function (request, h) {
           try {
             const categories = await db.categoryStore.getAllCategories();
@@ -16,8 +18,9 @@ export const categoryApi = {
       },
 
   findOne: {
-    auth: false,
-    async handler(request) {
+    auth: {
+      strategy: "jwt",
+    },    async handler(request) {
       try {
         const category = await db.categoryStore.getCategoryById(request.params.id);
         if (!category) {
@@ -31,8 +34,10 @@ export const categoryApi = {
   },
 
   create: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+      handler: async function (request, h) {
       try {
         const category = request.payload;
         const newCategory = await db.categoryStore.addCategory(category);
@@ -47,8 +52,10 @@ export const categoryApi = {
   },
 
   deleteOne: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+        handler: async function (request, h) {
       try {
         const category = await db.categoryStore.getCategoryById(request.params.id);
         if (!category) {
@@ -63,8 +70,10 @@ export const categoryApi = {
   },
 
   deleteAll: {
-    auth: false,
-    handler: async function (request, h) {
+    auth: {
+      strategy: "jwt",
+    },
+      handler: async function (request, h) {
       try {
         await db.categoryStore.deleteAllCategories();
         return h.response().code(204);

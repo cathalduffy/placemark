@@ -16,7 +16,8 @@ export const accountsController = {
   },
   signup: {
     auth: false,
-    validate: { // validation from the joi schemas
+    validate: {
+      // validation from the joi schemas
       payload: UserSpec,
       options: { abortEarly: false },
       failAction: function (request, h, error) {

@@ -23,8 +23,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     var marker = L.marker([lat, long]).addTo(map);
     marker.bindPopup("<strong>Name: </strong>" + name + "<br />" + "<strong>Lat: </strong>" + lat + "<br />" + "<strong>Lat: </strong>" + long, {maxWidth: 500});
 
-{{#each placemarks}}
-  var marker = L.marker([{{latitude}}, {{longitude}}]).addTo(mymap);
-{{/each}} 
 
 </script>

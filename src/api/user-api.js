@@ -1,6 +1,6 @@
 import Boom from "@hapi/boom";
 import { db } from "../models/db.js";
-import { UserArray, UserSpec, IdSpec} from "../models/joi-schemas.js";
+import { UserArray, UserSpec, IdSpec } from "../models/joi-schemas.js";
 import { validationError } from "./logger.js";
 import { createToken } from "./jwt-utils.js";
 
@@ -15,7 +15,7 @@ export const userApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
-    tags: ["api"],                          // annotation here to allow for swagger docs
+    tags: ["api"], // annotation here to allow for swagger docs
     description: "Get all userApi",
     notes: "Returns details of all userApi",
     response: { schema: UserArray, failAction: validationError },
@@ -78,20 +78,20 @@ export const userApi = {
 
   authenticate: {
     auth: false,
-    handler: async function(request, h) {
+    handler: async function (request, h) {
       try {
         const user = await db.userStore.getUserByEmail(request.payload.email);
         if (!user) {
           return Boom.unauthorized("User not found");
-        } if (user.password !== request.payload.password) {
+        }
+        if (user.password !== request.payload.password) {
           return Boom.unauthorized("Invalid password");
-        } 
-          const token = createToken(user);
-          return h.response({ success: true, token: token }).code(201);
-        
+        }
+        const token = createToken(user);
+        return h.response({ success: true, token: token }).code(201);
       } catch (err) {
         return Boom.serverUnavailable("Database Error");
       }
-    }
-  }
+    },
+  },
 };

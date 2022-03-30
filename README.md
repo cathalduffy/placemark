@@ -13,52 +13,47 @@ Handlebars framework, along with Bulma for CSS.
 
 ## Packages that were installed in the creation of the application
 
-npm install @hapi/hapi - Install Hapi for server
+**npm install @hapi/hapi** - Install Hapi for server
 
-npm install @hapi/vision
+**npm install** @hapi/vision
 
-npm install handlebars - Frontend
+**npm install** handlebars - Frontend
 
-npm install uuid - Install package to allow unique ids to be generated
+**npm install uuid** - Install package to allow unique ids to be generated
 
-npm install @hapi/cookie - Install package to allow sessions
+**npm install @hapi/cookie** - Install package to allow sessions
 
-npm install dotenv - Install package to allow for .env file
+**npm install dotenv** - Install package to allow for .env file
 
-npm install joi - Install package to allow for form validation rules
+**npm install joi** - Install package to allow for form validation rules
 
-npm install lowdb - Install package to allow for Json data store
+**npm install lowdb** - Install package to allow for Json data store
 
-Install packages to allow for unit testing
-npm install -D mocha
-npm install -D chai
 
-Install Mongoose library to interact with Mongo
-npm install mongoose
+**npm install -D mocha** - Install packages to allow for unit testing
 
-Install module to make retiring HHTP code easier
-npm install @hapi/boom
+**npm install -D chai**
 
-Allow HTTP client library
-npm install -D axios
+**npm install mongoose** - Install Mongoose library to interact with Mongo
 
-Relaunches app upon changes being made
-npm install -D nodemon
+**npm install @hapi/boom** - Install module to make retiring HHTP code easier
 
-Support images
-npm install @hapi/inert
+**npm install -D axios** - Allow HTTP client library
 
-Allow for swagger docs
-npm install hapi-swagger
+**npm install -D nodemon** - Relaunches app upon changes being made
 
-npm install leaflet
+**npm install @hapi/inert** - Support images
 
-Allow for db seeding
-npm install mais-mongoose-seeder
+**npm install hapi-swagger** - Allow for swagger docs
+
+**npm install leaflet** - Allow for Leaflet maps in frontend
+
+**npm install mais-mongoose-seeder** - Allow for db seeding
 
 Allow for json web tokens
-npm install hapi-auth-jwt2
-npm install jsonwebtoken
+**npm install hapi-auth-jwt2**
+
+**npm install jsonwebtoken**
 
 
 

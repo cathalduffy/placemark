@@ -3,24 +3,25 @@ import { db } from "../models/db.js";
 
 // endpoints
 export const categoryApi = {
-    find: {
-      auth: {
-        strategy: "jwt",
-      },
-        handler: async function (request, h) {
-          try {
-            const categories = await db.categoryStore.getAllCategories();
-            return categories;
-          } catch (err) {
-            return Boom.serverUnavailable("Database Error");
-          }
-        },
-      },
+  find: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function (request, h) {
+      try {
+        const categories = await db.categoryStore.getAllCategories();
+        return categories;
+      } catch (err) {
+        return Boom.serverUnavailable("Database Error");
+      }
+    },
+  },
 
   findOne: {
     auth: {
       strategy: "jwt",
-    },    async handler(request) {
+    },
+    async handler(request) {
       try {
         const category = await db.categoryStore.getCategoryById(request.params.id);
         if (!category) {
@@ -37,7 +38,7 @@ export const categoryApi = {
     auth: {
       strategy: "jwt",
     },
-      handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         const category = request.payload;
         const newCategory = await db.categoryStore.addCategory(category);
@@ -55,7 +56,7 @@ export const categoryApi = {
     auth: {
       strategy: "jwt",
     },
-        handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         const category = await db.categoryStore.getCategoryById(request.params.id);
         if (!category) {
@@ -73,7 +74,7 @@ export const categoryApi = {
     auth: {
       strategy: "jwt",
     },
-      handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         await db.categoryStore.deleteAllCategories();
         return h.response().code(204);

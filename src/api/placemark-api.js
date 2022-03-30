@@ -6,7 +6,7 @@ export const placemarkApi = {
     auth: {
       strategy: "jwt",
     },
-        handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         const placemarks = await db.placemarkStore.getAllPlacemarks();
         return placemarks;
@@ -20,7 +20,7 @@ export const placemarkApi = {
     auth: {
       strategy: "jwt",
     },
-        async handler(request) {
+    async handler(request) {
       try {
         const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
         if (!placemark) {
@@ -37,7 +37,7 @@ export const placemarkApi = {
     auth: {
       strategy: "jwt",
     },
-        handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         const placemark = await db.placemarkStore.addPlacemark(request.params.id, request.payload);
         if (placemark) {
@@ -54,7 +54,7 @@ export const placemarkApi = {
     auth: {
       strategy: "jwt",
     },
-        handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         await db.placemarkStore.deleteAllPlacemarks();
         return h.response().code(204);
@@ -68,7 +68,7 @@ export const placemarkApi = {
     auth: {
       strategy: "jwt",
     },
-        handler: async function (request, h) {
+    handler: async function (request, h) {
       try {
         const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
         if (!placemark) {

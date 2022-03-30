@@ -16,18 +16,17 @@ export const UserSpec = Joi.object()
 export const UserArray = Joi.array().items(UserSpec).label("UserArray");
 
 export const UserCredentialsSpec = {
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-  };
-  
-  export const PlacemarkSpec = {
-    name: Joi.string().required(),
-    latitude: Joi.string().required(),
-    longitude: Joi.number().allow("").optional(),
-    description: Joi.string().allow("").optional(),
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+};
 
-  };
-  
-  export const CategorySpec = {
-    title: Joi.string().required(),
-  };
+export const PlacemarkSpec = {
+  name: Joi.string().required(),
+  latitude: Joi.string().required(),
+  longitude: Joi.number().allow("").optional(),
+  description: Joi.string().allow("").optional(),
+};
+
+export const CategorySpec = {
+  title: Joi.string().required(),
+};

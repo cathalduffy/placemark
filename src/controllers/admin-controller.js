@@ -3,9 +3,9 @@ import { db } from "../models/db.js";
 export const adminController = {
   index: {
     auth: {
-        strategy: "session",
-        scope: "admin",
-      },
+      strategy: "session",
+      scope: "admin",
+    },
     handler: async function (request, h) {
       const users = await db.userStore.getAllUsers();
       const viewData = {

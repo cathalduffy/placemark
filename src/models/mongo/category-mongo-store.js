@@ -49,4 +49,11 @@ export const categoryMongoStore = {
     category.img = updatedCategory.img;
     await category.save();
   },
+
+  async findByName(title) {
+    const category = await Category.findOne({
+      title
+    });
+    return category;
+  },
 };

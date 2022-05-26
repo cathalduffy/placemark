@@ -23,4 +23,12 @@ export const seedData = {
       password: "$2a$10$uqnPlgyVjBEOtcgMhn/WRO3FwW4T9gX36tTB4RqpGeB/LkCR3YQuO",
     },
   },
+  placemark: {
+    _model: "Placemark",
+    Tramore: {
+      name: "Tramore",
+      latitude: 52.161435,
+      longitude: -7.149295,
+    },
+  }
 };

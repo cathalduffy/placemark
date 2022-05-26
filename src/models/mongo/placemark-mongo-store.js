@@ -46,4 +46,16 @@ export const placemarkMongoStore = {
     placemark.duration = updatedPlacemark.duration;
     await placemark.save();
   },
+
+  async placemark(name, latitude, longitude, description) {
+    const newPlacemark = new Placemark({
+      name,
+      latitude,
+      longitude,
+      // donor: donor._id,
+      category: category._id,
+    });
+    await newPlacemark.save();
+    return newPlacemark;
+  },
 };

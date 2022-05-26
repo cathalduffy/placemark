@@ -26,7 +26,8 @@ const swaggerOptions = {
 
 async function init() {
   const server = Hapi.server({
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4000,
+    routes: { cors: true},
   });
   await server.register(Vision);
   await server.register(Cookie);
@@ -53,7 +54,7 @@ async function init() {
   server.auth.strategy("jwt", "jwt", {
     key: process.env.cookie_password,
     validate: validate,
-    verifyOptions: { algorithms: ["HS256"] }
+    verifyOptions: { algorithms: ["HS256"] },
   });
   server.auth.default("session");
   server.views({

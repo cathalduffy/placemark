@@ -23,12 +23,24 @@ export const seedData = {
       password: "$2a$10$uqnPlgyVjBEOtcgMhn/WRO3FwW4T9gX36tTB4RqpGeB/LkCR3YQuO",
     },
   },
+  categories: {
+    _model: "Category",
+    beach: {
+      title: "Beach",
+    },
+  },
   placemark: {
     _model: "Placemark",
     Tramore: {
       name: "Tramore",
       latitude: 52.161435,
       longitude: -7.149295,
+      categoryid: "->categories.beach"
+    },
+    Dunmore: {
+      name: "Dunmore",
+      latitude: 58.161435,
+      longitude: -10.149295,
     },
   }
 };

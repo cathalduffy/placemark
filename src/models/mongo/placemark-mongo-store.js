@@ -16,7 +16,9 @@ export const placemarkMongoStore = {
   },
 
   async getPlacemarksByCategoryId(id) {
+    console.log(`method ${  id}`)
     const placemarks = await Placemark.find({ categoryid: id }).lean();
+    console.log(placemarks)
     return placemarks;
   },
 

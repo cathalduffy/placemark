@@ -81,4 +81,20 @@ export const placemarkApi = {
       }
     },
   },
+
+  findByCat: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function (request, h) {
+      const categoryId = request.params.id
+      console.log(`test${  request.params.id}`)
+      try {
+        const placemarks = await db.placemarkStore.getPlacemarksByCategoryId(categoryId);
+        return placemarks;
+      } catch (err) {
+        return Boom.serverUnavailable("Database Error");
+      }
+    },
+  },
 };

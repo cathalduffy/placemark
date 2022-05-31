@@ -21,8 +21,10 @@ export const placemarkApi = {
       strategy: "jwt",
     },
     async handler(request) {
+      const placemarkId = request.params.id
+      console.log(`test placemarkid${  request.params.id}`)
       try {
-        const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
+        const placemark = await db.placemarkStore.getPlacemarkById(placemarkId);
         if (!placemark) {
           return Boom.notFound("No placemark with this id");
         }

@@ -16,7 +16,9 @@ export const placemarkMongoStore = {
   },
 
   async getPlacemarksByCategoryId(id) {
+    console.log(`method ${  id}`)
     const placemarks = await Placemark.find({ categoryid: id }).lean();
+    console.log(placemarks)
     return placemarks;
   },
 
@@ -45,5 +47,17 @@ export const placemarkMongoStore = {
     placemark.artist = updatedPlacemark.artist;
     placemark.duration = updatedPlacemark.duration;
     await placemark.save();
+  },
+
+  async placemark(name, latitude, longitude, description) {
+    const newPlacemark = new Placemark({
+      name,
+      latitude,
+      longitude,
+      // donor: donor._id,
+      category: category._id,
+    });
+    await newPlacemark.save();
+    return newPlacemark;
   },
 };

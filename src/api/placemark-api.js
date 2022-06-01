@@ -21,8 +21,10 @@ export const placemarkApi = {
       strategy: "jwt",
     },
     async handler(request) {
+      const placemarkId = request.params.id
+      console.log(`test placemarkid${  request.params.id}`)
       try {
-        const placemark = await db.placemarkStore.getPlacemarkById(request.params.id);
+        const placemark = await db.placemarkStore.getPlacemarkById(placemarkId);
         if (!placemark) {
           return Boom.notFound("No placemark with this id");
         }
@@ -78,6 +80,22 @@ export const placemarkApi = {
         return h.response().code(204);
       } catch (err) {
         return Boom.serverUnavailable("No Placemark with this id");
+      }
+    },
+  },
+
+  findByCat: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function (request, h) {
+      const categoryId = request.params.id
+      console.log(`test${  request.params.id}`)
+      try {
+        const placemarks = await db.placemarkStore.getPlacemarksByCategoryId(categoryId);
+        return placemarks;
+      } catch (err) {
+        return Boom.serverUnavailable("Database Error");
       }
     },
   },

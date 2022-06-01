@@ -28,6 +28,9 @@ export const seedData = {
     beach: {
       title: "Beach",
     },
+    mountain: {
+      title: "Mountain",
+    },
   },
   placemark: {
     _model: "Placemark",
@@ -39,8 +42,15 @@ export const seedData = {
     },
     Dunmore: {
       name: "Dunmore",
-      latitude: 58.161435,
-      longitude: -10.149295,
+      latitude: 52.152767,
+      longitude: -6.994804,
+      categoryid: "->categories.beach"
+    },
+    Sugarloaf: {
+      name: "Sugarloaf",
+      latitude: 51.7258333,
+      longitude: -9.6311111,
+      categoryid: "->categories.mountain"
     },
   }
 };

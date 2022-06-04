@@ -1,5 +1,6 @@
 import Boom from "@hapi/boom";
 import { db } from "../models/db.js";
+import Weather from "../utils/weather.js"
 
 export const placemarkApi = {
   find: {
@@ -25,10 +26,26 @@ export const placemarkApi = {
       console.log(`test placemarkid${  request.params.id}`)
       try {
         const placemark = await db.placemarkStore.getPlacemarkById(placemarkId);
+        const latitude = placemark.latitude;
+        const longitude = placemark.longitude;
+        const readWeather = await Weather.readWeather(latitude, longitude);
+        console.log(readWeather);
+        const weather = {
+          name: readWeather.name,
+          latitude: readWeather.coord.lat,
+          longitude: readWeather.coord.lon,
+          temperature: Math.round(readWeather.main.temp - 273.15),
+          feelsLike: Math.round(readWeather.main.feels_like - 273.15),
+          clouds: readWeather.weather[0].description,
+          windSpeed: readWeather.wind.speed,
+          windDirection: readWeather.wind.deg,
+          visibility: readWeather.visibility / 1000,
+          humidity: readWeather.main.humidity,
+        };
         if (!placemark) {
           return Boom.notFound("No placemark with this id");
         }
-        return placemark;
+        return weather;
       } catch (err) {
         return Boom.serverUnavailable("No placemark with this id");
       }

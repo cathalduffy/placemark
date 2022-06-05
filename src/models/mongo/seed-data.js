@@ -61,5 +61,14 @@ export const seedData = {
       cleanlinessRating: 3,
       categoryid: "->categories.mountain"
     },
+    Galtee: {
+      name: "Galtee Mountains",
+      latitude: 52.3668,
+      longitude: -8.14451,
+      amenitiesRating: 7,
+      foodRating: 6,
+      cleanlinessRating: 8,
+      categoryid: "->categories.mountain"
+    },
   }
 };

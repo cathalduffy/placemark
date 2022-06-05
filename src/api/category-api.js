@@ -9,7 +9,7 @@ export const categoryApi = {
     },
     handler: async function (request, h) {
       try {
-        const categories = await db.Category.find();
+        const categories = await db.categoryStore.getAllCategories();
         return categories;
       } catch (err) {
         return Boom.serverUnavailable("Database Error");

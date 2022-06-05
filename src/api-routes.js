@@ -15,6 +15,7 @@ export const apiRoutes = [
   { method: "DELETE", path: "/api/categories", config: categoryApi.deleteAll },
   { method: "GET", path: "/api/categories", config: categoryApi.find },
   { method: "GET", path: "/api/categories/{id}", config: categoryApi.findOne },
+  { method: "GET", path: "/api/categories/{id}/placemarks", config: placemarkApi.findByCat },
   { method: "DELETE", path: "/api/categories/{id}", config: categoryApi.deleteOne },
 
   { method: "GET", path: "/api/placemarks", config: placemarkApi.find },
@@ -22,5 +23,5 @@ export const apiRoutes = [
   { method: "POST", path: "/api/categories/{id}/placemarks", config: placemarkApi.create },
   { method: "DELETE", path: "/api/placemarks", config: placemarkApi.deleteAll },
   { method: "DELETE", path: "/api/placemarks/{id}", config: placemarkApi.deleteOne },
-
+  
 ];

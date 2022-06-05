@@ -38,18 +38,36 @@ export const seedData = {
       name: "Tramore",
       latitude: 52.161435,
       longitude: -7.149295,
+      amenitiesRating: 10,
+      foodRating: 8,
+      cleanlinessRating: 5,
       categoryid: "->categories.beach"
     },
     Dunmore: {
       name: "Dunmore",
       latitude: 52.152767,
       longitude: -6.994804,
+      amenitiesRating: 8,
+      foodRating: 3,
+      cleanlinessRating: 9,
       categoryid: "->categories.beach"
     },
     Sugarloaf: {
       name: "Sugarloaf",
       latitude: 51.7258333,
       longitude: -9.6311111,
+      amenitiesRating: 9,
+      foodRating: 4,
+      cleanlinessRating: 3,
+      categoryid: "->categories.mountain"
+    },
+    Galtee: {
+      name: "Galtee Mountains",
+      latitude: 52.3668,
+      longitude: -8.14451,
+      amenitiesRating: 7,
+      foodRating: 6,
+      cleanlinessRating: 8,
       categoryid: "->categories.mountain"
     },
   }
